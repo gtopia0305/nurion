@@ -7,9 +7,21 @@
 
 #### ■ **Flat 모드 작업 스크립트 작성 예제**
 
-|                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| <p>#!/bin/sh</p><p>#PBS -N <strong>flat_job</strong></p><p>#PBS -V</p><p>#PBS -q flat</p><p><mark style="color:red;">#PBS -A {PBS 옵션 이름} # Application별 PBS 옵션 이름표 참고</mark> </p><p>#PBS -l select=1:ncpus=68:mpiprocs=32:ompthreads=1</p><p>#PBS -l walltime=12:00:00</p><p></p><p>cd $PBS_O_WORKDIR</p><p></p><p><em>mpirun <strong>numactl -m 1</strong> my_app.x</em></p><p>또는</p><p>mpirun <strong>numactl -p 1</strong> my_app.x</p> |
+```
+#!/bin/sh
+#PBS -N flat_job
+#PBS -V
+#PBS -q flat
+#PBS -A {PBS 옵션 이름} # Application별 PBS 옵션 이름표 참고 
+#PBS -l select=1:ncpus=68:mpiprocs=32:ompthreads=1
+#PBS -l walltime=12:00:00
+
+cd $PBS_O_WORKDIR
+
+mpirun numactl -m 1 my_app.x
+또는
+mpirun numactl -p 1 my_app.x
+```
 
 ※ pbs option으로 제출할 큐는 반드시 flat 선택 (즉, -q flat)
 
