@@ -100,65 +100,38 @@ Caffe의 다중노드 병렬화는 Horovod에서 공식적으로 지원하지 �
 
 **◦ Intel Caffe 병렬처리 수행 방법 (작업스크립트 예제)**
 
-> \#!/bin/sh
->
-> \#PBS -N test
->
-> \#PBS -V
->
-> \#PBS -l select=4:ncpus=68:mpiprocs=1:ompthreads=68
->
-> \#PBS -q normal
->
-> \#PBS -l walltime=04:00:00
->
-> \#PBS -A caffe
->
->
->
-> cd $PBS\_O\_WORKDIR
->
->
->
-> module purge
->
-> module load conda/intel\_caffe\_1.1.5
->
-> source /apps/applications/miniconda3/envs/intel\_caffe/mlsl\_2018.3.008/intel64/bin/mlslvars.sh
->
->
->
-> export KMP\_AFFINITY=verbose,granularity=fine,compact=1
->
-> export KMP\_BLOCKTIME=1
->
-> export KMP\_SETTINGS=1
->
-> <mark style="color:blue;"></mark>
->
-> <mark style="color:blue;">export OMP\_NUM\_THREADS=60</mark>
->
-> <mark style="color:blue;">mpirun -PSM2 -prepend-rank caffe train \\</mark>
->
-> <mark style="color:blue;">--solver ./models/intel\_optimized\_models/multinode/alexnet\_4nodes/solver.prototxt</mark>
->
-> <mark style="color:blue;"></mark>
->
-> <mark style="color:blue;"># 혹은</mark>
->
-> <mark style="color:blue;"></mark>
->
-> <mark style="color:blue;">./scripts/run\_intelcaffe.sh --hostfile $PBS\_NODEFILE \\</mark>
->
-> <mark style="color:blue;">--caffe\_bin /apps/applications/miniconda3/envs/intel\_caffe/bin/caffe \\</mark>
->
-> <mark style="color:blue;">--solver models/intel\_optimized\_models/multinode/alexnet\_4nodes/solver.prototxt \\</mark>
->
-> <mark style="color:blue;">--network opa --ppn 1 --num\_omp\_threads 60</mark>
->
->
->
-> exit 0
+```
+#!/bin/sh
+#PBS -N test
+#PBS -V
+#PBS -l select=4:ncpus=68:mpiprocs=1:ompthreads=68
+#PBS -q normal
+#PBS -l walltime=04:00:00
+#PBS -A caffe
+
+cd $PBS_O_WORKDIR
+
+module purge
+module load conda/intel_caffe_1.1.5
+source /apps/applications/miniconda3/envs/intel_caffe/mlsl_2018.3.008/intel64/bin/mlslvars.sh
+
+export KMP_AFFINITY=verbose,granularity=fine,compact=1
+export KMP_BLOCKTIME=1
+export KMP_SETTINGS=1
+
+export OMP_NUM_THREADS=60
+mpirun -PSM2 -prepend-rank caffe train \
+--solver ./models/intel_optimized_models/multinode/alexnet_4nodes/solver.prototxt
+
+# 혹은
+
+./scripts/run_intelcaffe.sh --hostfile $PBS_NODEFILE \
+--caffe_bin /apps/applications/miniconda3/envs/intel_caffe/bin/caffe \
+--solver models/intel_optimized_models/multinode/alexnet_4nodes/solver.prototxt \
+--network opa --ppn 1 --num_omp_threads 60
+
+exit 0
+```
 
 ※ Network 옵션: Intel Onmi-Path Architecture (OPA)로 설정
 
