@@ -50,9 +50,10 @@ $ id 사용자ID
 
 누리온 시스템에서 PBS를 사용하는 예제 파일들이 아래의 경로에 존재하므로 사용자 작업용 파일을 만들 때 이를 참고하시기 바랍니다.
 
-※ 아래 예제는 누리온 시스템 에서의 가우시안16 LINDA에 대한 예제입니다.
+※ 아래 예제는 누리온 시스템 에서의 가우시안16 LINDA에 대한 예제입니다.(멀티노드 예제)
 
-{% code title="파일 위치: /apps/commercial/test_samples/G16/g16_Linda.sh" %}
+파일 위치: /apps/commercial/test\_samples/G16/g16\_Linda.sh
+
 ```
 #!/bin/sh
 #PBS -V
@@ -75,7 +76,6 @@ g16 test000.com
 
 exit 0
 ```
-{% endcode %}
 
 <mark style="color:red;">**- 2019년 3월 PM 이후(3월14일)부터 "#PBS -A gaussian" 옵션이 없는 경우 작업제출이 되지 않습니다.**</mark>
 

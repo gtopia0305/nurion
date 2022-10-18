@@ -54,8 +54,7 @@ $ module load gaussian/g16.a03
 
 ※ 아래 예제는 누리온 시스템 에서의 가우시안16에 대한 예제입니다.
 
-파일 위치: /apps/commercial/test\_samples/G16/g16.sh
-
+{% code title="파일 위치: /apps/commercial/test_samples/G16/g16.sh" %}
 ```
 #!/bin/sh
 #PBS -V
@@ -77,6 +76,7 @@ g16 test000.com
 
 exit 0
 ```
+{% endcode %}
 
 <mark style="color:red;">**- 2019년 3월 PM 이후(3월14일)부터 "#PBS -A gaussian" 옵션이 없는 경우 작업제출이 되지 않습니다.**</mark>
 
