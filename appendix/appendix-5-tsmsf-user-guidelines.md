@@ -42,26 +42,23 @@ TSMSF는 기본적으로 테이프 미디어를 이용하므로 <mark style="col
 
 (방법1) 로그인 노드(nurion.ksc.re.kr)나 Datamover 노드(nurion-dm.ksc.re.kr)에 접속(ssh)하여 cp 사용
 
-\[user01@dm2:/home01/user01 ]$ ssh $USER@nurion-dm.ksc.re.kr (또는 ssh $USER@nurion.ksc.re.kr)
-
-{% code title="(방법1) 로그인 노드(nurion.ksc.re.kr)나 Datamover 노드(nurion-dm.ksc.re.kr)에 접속(ssh)하여 cp 사용" %}
 ```
 [user01@dm2:/home01/user01 ]$ ssh $USER@nurion-dm.ksc.re.kr (또는 ssh $USER@nurion.ksc.re.kr)
  Password(OTP):
  Password:
 
 [user01@dm02:/home01/user01 ]$ cp –r [mydir | myfile] /scratch/arcv/$USER/
-
 ```
-{% endcode %}
 
-{% code title="(방법2) 원격에서 scp 사용" %}
+
+
+(방법2) 원격에서 scp 사용
+
 ```
 [user01@login01:/home01/user01 ]$ scp –r [mydir | myfile] $USER@nurion-dm.ksc.re.kr:/scratch/arcv/$USER/
 Password(OTP):
 Password:
 ```
-{% endcode %}
 
 
 
