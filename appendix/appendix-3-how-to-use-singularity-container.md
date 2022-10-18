@@ -54,8 +54,7 @@ _※ 단, 생성된 싱귤레러티 이미지 파일(\*.sif)을 수정하기 위
 
 ****
 
-**(ubuntu.def recipe 파일 예제)**
-
+{% code title="(ubuntu.def recipe 파일 예제)" %}
 ```
 bootstrap: library
 from: ubuntu:18.04
@@ -64,6 +63,7 @@ apt update
 %runscript
 echo "hello world from ubuntu container!"
 ```
+{% endcode %}
 
 ****
 

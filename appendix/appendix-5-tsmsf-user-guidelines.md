@@ -38,6 +38,12 @@ TSMSF는 기본적으로 테이프 미디어를 이용하므로 <mark style="col
 
 사용자 데이터 아카이빙을 위해서는 누리온 시스템의 로그인 노드나 Datamover 노드를 활용하시기 바랍니다. 주의하실 점은 최초 로그인시 디렉토리 위치는 ‘/home01/$USER’로 이는 TSMSF 내의 홈 디렉터리가 아니라 누리온 시스템의 일반적인 홈 디렉터리입니다. 따라서 cd 명령어(cd /scratch/arcv/$USER)로 경로를 변경하여 TSMSF를 위한 사용자 디렉터리로 이동하시기 바랍니다.
 
+
+
+(방법1) 로그인 노드(nurion.ksc.re.kr)나 Datamover 노드(nurion-dm.ksc.re.kr)에 접속(ssh)하여 cp 사용
+
+\[user01@dm2:/home01/user01 ]$ ssh $USER@nurion-dm.ksc.re.kr (또는 ssh $USER@nurion.ksc.re.kr)
+
 {% code title="(방법1) 로그인 노드(nurion.ksc.re.kr)나 Datamover 노드(nurion-dm.ksc.re.kr)에 접속(ssh)하여 cp 사용" %}
 ```
 [user01@dm2:/home01/user01 ]$ ssh $USER@nurion-dm.ksc.re.kr (또는 ssh $USER@nurion.ksc.re.kr)
