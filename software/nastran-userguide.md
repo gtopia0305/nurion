@@ -84,7 +84,8 @@
 
 
 
-{% code title="[ nast20182rc 파일 예제 ]" %}
+\[ nast20182rc 파일 예제 ]
+
 ```
 auth=27500@vaccine02.ext
 mode=i8
@@ -103,7 +104,6 @@ $
 scr=yes
 $ End
 ```
-{% endcode %}
 
 ※ 사용자 홈디렉토리로 복사할 때 아래와 같이 사용하면 됩니다.
 
