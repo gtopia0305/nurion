@@ -133,8 +133,19 @@ $ cp /apps/commercial/MSC/Nastran/conf/nast20182rc ./.nast20182rc
 
 ※ 아래 예제는 누리온 시스템 에서의 NASTRAN에 대한 예제입니다.
 
-| <p>#!/bin/sh</p><p>#PBS -V</p><p>#PBS -N <mark style="color:blue;">Nastran_job</mark></p><p>#PBS -q commercial</p><p>#PBS -l select=1:ncpus=<mark style="color:blue;">40</mark>:mpiprocs=1:ompthreads=<mark style="color:blue;">40</mark></p><p>#PBS -l walltime=<mark style="color:blue;">04:00:00</mark></p><p><mark style="color:red;">#PBS -A nastran</mark></p><p></p><p>cd $PBS_O_WORKDIR</p><p></p><p>/apps/commercial/MSC/Nastran/bin/nast20182 <mark style="color:blue;">car_mod_freq.bdf</mark> smp=$NCPUS batch=no sdir="."</p> |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+```
+#!/bin/sh
+#PBS -V
+#PBS -N Nastran_job
+#PBS -q commercial
+#PBS -l select=1:ncpus=40:mpiprocs=1:ompthreads=40
+#PBS -l walltime=04:00:00
+#PBS -A nastran
+
+cd $PBS_O_WORKDIR
+
+/apps/commercial/MSC/Nastran/bin/nast20182 car_mod_freq.bdf smp=$NCPUS batch=no sdir="."
+```
 
 \- 위에서 파란색으로 표기된 부분은 사용자가 적절히 수정해야 합니다.
 
