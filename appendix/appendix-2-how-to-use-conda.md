@@ -56,8 +56,7 @@ Python 사용자들이 패키지 설치 시 가장 어려움을 겪는 의존성
 
 \- "--use-local" 옵션을 사용하면 사용자 홈 디렉토리(**${HOME}/.conda/envs/\[environment\_name]**)에 생성 된다.
 
-\- 예제 -
-
+{% code title="- 예제 -" %}
 ```
 $ module load python/3.7
 $ conda create -n scikit-learn_0.21 --use-local
@@ -84,6 +83,7 @@ Executing transaction: done
 $ source activate scikit-learn_0.21
 (scikit-learn_0.21) $  
 ```
+{% endcode %}
 
 ## 다. Conda Environment에 패키지 설치 및 확인
 
@@ -93,8 +93,7 @@ $ source activate scikit-learn_0.21
 
 \- 위 "2" 항목에서 생성한 conda environment 경로 아래에 패키지 들이 설치 된다.
 
-\- 예제 -
-
+{% code title="- 예제 -" %}
 ```
 $ module load python/3.7
 $ source activate scikit-learn_0.21
@@ -135,13 +134,13 @@ Executing transaction: done
 (scikit-learn_0.21) $ python -c "import sklearn"
 (scikit-learn_0.21) $
 ```
+{% endcode %}
 
 ## 라. Conda Environment 목록 확인
 
 \- "conda-env list" 또는 "conda env list" 를 이용하여 목록을 확인 할 수 있다.
 
-\-예제-
-
+{% code title="- 예제 -" %}
 ```
 (scikit-learn_0.21) $ conda env list
 # conda environments:
@@ -151,19 +150,20 @@ scikit-learn_0.21     *  /home01/userID/.conda/envs/scikit-learn_0.21
 (scikit-learn_0.21) $ conda deactivate
 $
 ```
+{% endcode %}
 
 ## 마. Conda Environment 삭제
 
 \- "conda-env remove -n \[ENVIRONMENT]" 또는 "conda env remove -n \[ENVIRONMENT]" 를 이용하여 삭제 할 수 있다.
 
-\-예제-
-
+{% code title="- 예제 -" %}
 ```
 $ module load python/3.7
 $ conda env remove -n scikit-learn_0.21
 Remove all packages in environment /home01/userID/.conda/envs/scikit-learn_0.21:
 $
 ```
+{% endcode %}
 
 ## 바. Conda Environment 내보내기
 
@@ -175,8 +175,7 @@ $
 
 (예) 외부 인터넷이 연결되지 않는 경우, 다른 시스템에서 동일한 conda 환경을 이용하는 경우
 
-\-예제-
-
+{% code title="- 예제 -" %}
 ```
 $ module load python/3.7
 $ source activate tensorflow_1.12
@@ -189,13 +188,13 @@ Packing environment at '/home01/userID/.conda/envs/tensorflow_1.12' to 'conda_te
 -rw-------. 1 userID in0162 1459826406 Mar 28 15:03 conda_tensorflow_1.12.tar.gz
 (tensorflow_1.12) $
 ```
+{% endcode %}
 
 ## 사. Conda Environment 가져오기
 
 \- conda pack 을 이용하여 생성했던 conda environment 를 아래 -예제-와 같이 가져와 환경설정 후 사용 가능.
 
-\-예제-
-
+{% code title="- 예제 -" %}
 ```markup
 $ module load python/3.7
 $ mkdir -p $HOME/.conda/envs/tensorflow_1.12
@@ -205,6 +204,7 @@ $ source activate tensorflow_1.12
 (tensorflow_1.12) $ conda deactivate
 $
 ```
+{% endcode %}
 
 
 
