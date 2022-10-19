@@ -115,7 +115,8 @@ PBS에서 배치 작업을 수행하기 위해서는 위에서 설명된 PBS 키
 
 ※ /apps/shell/home/job\_examples 에서 작업제출 스크립트 예제 파일을 복사하여 사용 가능
 
-{% code title="■ Serial 프로그램 작업 스크립트 작성 예제(serial.sh)" %}
+■ Serial 프로그램 작업 스크립트 작성 예제(serial.sh)
+
 ```
 #!/bin/sh
 #PBS -N serial_job
@@ -133,7 +134,6 @@ module load craype-mic-knl
 
 ./test.exe
 ```
-{% endcode %}
 
 ※ 1노드 점유 순차, 사용 예제
 
@@ -141,7 +141,8 @@ module load craype-mic-knl
 
 
 
-{% code title="■ OpenMP 프로그램 작업 스크립트 작성 예제(openmp.sh)" %}
+■ OpenMP 프로그램 작업 스크립트 작성 예제(openmp.sh)
+
 ```
 #!/bin/sh
 #PBS -N openmp_job
@@ -157,9 +158,10 @@ module purge module load craype-mic-knl
 
 ./test_omp.exe
 ```
-{% endcode %}
 
 ※ 1노드 점유, 노드 당 64 스레드(총 64 OpenMP 스레드) 사용 예제
+
+
 
 
 
