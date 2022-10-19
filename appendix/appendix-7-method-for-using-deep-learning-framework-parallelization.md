@@ -12,9 +12,13 @@
 
 ****
 
-<pre data-title="◦ Tensorflow에서 Horovod 사용을 위한 import 및 메인 함수에서 Horovod 초기화"><code><strong>import horovod.tensorflow as hvd
-</strong>...
-hvd.init()</code></pre>
+**◦ Tensorflow에서 Horovod 사용을 위한 import 및 메인 함수에서 Horovod 초기화**
+
+```
+import horovod.tensorflow as hvd
+...
+hvd.init()
+```
 
 ※ horovod.tensorflow: Horovod를 Tensorflow와 연동하기 위한 모듈
 
@@ -22,18 +26,19 @@ hvd.init()</code></pre>
 
 ****
 
-{% code title="◦ 메인 함수에서 Horovod 활용을 위한 Dataset 설정" %}
+**◦ 메인 함수에서 Horovod 활용을 위한 Dataset 설정**
+
 ```
 (x_train, y_train), (x_test, y_test) = \
 keras.datasets.mnist.load_data('MNIST-data-%d' % hvd.rank())
 ```
-{% endcode %}
 
 ※ 각 작업별로 접근할 dataset을 설정하기 위하여 Horovod rank에 따라 설정 및 생성한다.
 
 ****
 
-{% code title="◦ 메인 함수에서 optimizer에 Horovod 관련 설정 및 broadcast, 학습 진행 수 설정" %}
+**◦ 메인 함수에서 optimizer에 Horovod 관련 설정 및 broadcast, 학습 진행 수 설정**
+
 ```
 opt = tf.train.AdamOptimizer(0.001 * hvd.size())
 opt = hvd.DistributedOptimizer(opt)
@@ -42,7 +47,6 @@ train_op = opt.minimize(loss, global_step=global_step)
 hooks = [hvd.BroadcastGlobalVariablesHook(0),
                   tf.train.StopAtStepHook(last_step=20000 // hvd.size()), ... ]
 ```
-{% endcode %}
 
 ※ Optimizer에 Horovod 관련 설정을 적용하고 각 작업에 broadcast를 활용하여 전달함
 
@@ -50,13 +54,13 @@ hooks = [hvd.BroadcastGlobalVariablesHook(0),
 
 ****
 
-{% code title="◦ Inter operation 및 Intra operation의 병렬처리 설정" %}
+**◦ Inter operation 및 Intra operation의 병렬처리 설정**
+
 ```
 config = tf.ConfigProto()
 config.intra_op_parallelism_threads = int(os.environ[‘OMP_NUM_THREADS’])
 config.inter_op_parallelism_threads = 2
 ```
-{% endcode %}
 
 ※ config.intra\_op\_parallelism\_threads: 연산 작업에서 사용할 thread 개수를 설정하는데 사용되며 job script에서 설정한 OMP\_NUM\_THREADS를 불러와서 적용함 (본 예시의 경우 OMP\_NUM\_THREADS를 32로 설정함)
 
@@ -64,7 +68,8 @@ config.inter_op_parallelism_threads = 2
 
 
 
-{% code title="◦ Rank 0 작업에 Checkpoint 설정" %}
+◦ Rank 0 작업에 Checkpoint 설정
+
 ```
 checkpoint_dir = './checkpoints' if hvd.rank() == 0 else None
 ...
@@ -72,7 +77,6 @@ with tf.train.MonitoredTrainingSession(checkpoint_dir=checkpoint_dir,
 hooks=hooks,
 config=config) as mon_sess:
 ```
-{% endcode %}
 
 |   |
 | - |
@@ -94,7 +98,8 @@ Caffe의 다중노드 병렬화는 Horovod에서 공식적으로 지원하지 �
 
 ****
 
-{% code title="◦ Intel Caffe 병렬처리 수행 방법 (작업스크립트 예제)" %}
+**◦ Intel Caffe 병렬처리 수행 방법 (작업스크립트 예제)**
+
 ```
 #!/bin/sh
 #PBS -N test
@@ -127,7 +132,6 @@ mpirun -PSM2 -prepend-rank caffe train \
 
 exit 0
 ```
-{% endcode %}
 
 ※ Network 옵션: Intel Onmi-Path Architecture (OPA)로 설정
 
