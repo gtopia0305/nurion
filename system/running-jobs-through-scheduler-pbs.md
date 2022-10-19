@@ -163,9 +163,8 @@ module purge module load craype-mic-knl
 
 
 
+■ MPI (IntelMPI)프로그램 작업 스크립트 작성 예제(mpi.sh)
 
-
-{% code title="■ MPI (IntelMPI)프로그램 작업 스크립트 작성 예제(mpi.sh)" %}
 ```
 #!/bin/sh
 #PBS -N IntelMPI_job
@@ -181,13 +180,13 @@ module load craype-mic-knl intel/18.0.3 impi/18.0.3
 
 mpirun ./test_mpi.exe
 ```
-{% endcode %}
 
 ※ 4노드 점유, 노드 당 64 프로세스(총 256 MPI 프로세스) 사용 예제
 
 
 
-{% code title="■ MPI (OpenMPI)프로그램 작업 스크립트 작성 예제(mpi.sh)" %}
+■ MPI (OpenMPI)프로그램 작업 스크립트 작성 예제(mpi.sh)
+
 ```
 #!/bin/sh
 #PBS -N OpenMPI_job
@@ -204,13 +203,13 @@ module load craype-mic-knl gcc/7.2.0 openmpi/3.1.0
 
 mpirun ./test_mpi.exe
 ```
-{% endcode %}
 
 ※ 4노드 점유, 노드 당 64 프로세스(총 256 MPI 프로세스) 사용 예제
 
 
 
-{% code title="■ MPI (Mvapich2) 프로그램 작업 스크립트 작성 예제(mpi_mvapich2.sh)" %}
+■ MPI (Mvapich2) 프로그램 작업 스크립트 작성 예제(mpi\_mvapich2.sh)
+
 ```
 #!/bin/sh
 #PBS -N mvapich2_job
@@ -229,13 +228,13 @@ TOTAL_CPUS=$(wc -l $PBS_NODEFILE | awk '{print $1}')
 
 mpirun_rsh -np ${TOTAL_CPUS} -hostfile $PBS_NODEFILE ./test_mpi.exe
 ```
-{% endcode %}
 
 ※ 4노드 점유, 노드 당 64 프로세스(총 256 MPI 프로세스) 사용 예제
 
 
 
-{% code title="■ Hybrid(IntelMPI + OpenMP) 프로그램 작업 스크립트 작성 예제(hybrid_intel.sh)" %}
+■ Hybrid(IntelMPI + OpenMP) 프로그램 작업 스크립트 작성 예제(hybrid\_intel.sh)
+
 ```
 #!/bin/sh
 #PBS -N hybrid_job
@@ -252,13 +251,13 @@ module load craype-mic-knl intel/18.0.3 impi/18.0.3
 
 mpirun ./test_mpi.exe
 ```
-{% endcode %}
 
 ※ 4노드 점유, 노드 당 2 프로세스, 프로세스 당 32 스레드(총 8 MPI 프로세스, 256 OpenMP 스레드) 사용 예제
 
 
 
-{% code title="■ Hybrid(openMPI + OpenMP) 프로그램 작업 스크립트 작성 예제(hybrid_openmpi.sh)" %}
+■ Hybrid(openMPI + OpenMP) 프로그램 작업 스크립트 작성 예제(hybrid\_openmpi.sh)
+
 ```
 #!/bin/sh
 #PBS -N hybrid_job
@@ -275,13 +274,13 @@ module load craype-mic-knl gcc/7.2.0 openmpi/3.1.0
 
 mpirun --map-by NUMA:PE=34 ./test_mpi.exe
 ```
-{% endcode %}
 
 ※ 4노드 점유, 노드 당 2 프로세스, 프로세스 당 32 스레드(총 8 MPI 프로세스, 256 OpenMP 스레드) 사용 예제
 
 
 
-{% code title="■ Hybrid(Mvapich2 + OpenMP) 프로그램 작업 스크립트 작성 예제(hybrid_mvapich2.sh)" %}
+■ Hybrid(Mvapich2 + OpenMP) 프로그램 작업 스크립트 작성 예제(hybrid\_mvapich2.sh)
+
 ```
 #!/bin/sh
 #PBS -N hybrid_job
@@ -300,7 +299,6 @@ TOTAL_CPUS=$(wc -l $PBS_NODEFILE | awk '{print $1}')
 
 mpirun_rsh -np ${TOTAL_CPUS} -hostfile $PBS_NODEFILE OMP_NUM_THREADS=$OMP_NUM_THREADS ./test_mpi.exe
 ```
-{% endcode %}
 
 ※ 4노드 점유, 노드 당 2 프로세스, 프로세스 당 32 스레드(총 8 MPI 프로세스, 256 OpenMP 스레드) 사용 예제
 
@@ -390,14 +388,14 @@ $ qsub -I -V -l select=1:ncpus=68:ompthreads=1 -l walltime=12:00:00 -q normal -A
 
 
 
-{% code title="■ 인터렉티브 모드로 계산 노드에서 텐서플로우 프로그램 실행 예제" %}
+■ 인터렉티브 모드로 계산 노드에서 텐서플로우 프로그램 실행 예제
+
 ```
 $ qsub -I -V -l select=1:ncpus=68:ompthreads=68 \
 -l walltime=12:00:00 -q normal -A tf
 
 $ export OMP_NUM_THREADS=68; singularity exec tensorflow-1.12.0-py3.simg python convolutional.py
 ```
-{% endcode %}
 
 ※ 예제 싱귤레러티 이미지 파일 위치: /apps/applications/tensorflow/1.12.0/tensorflow-1.12.0-py3.simg
 
