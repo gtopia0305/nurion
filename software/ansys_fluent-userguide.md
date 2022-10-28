@@ -168,3 +168,7 @@ $ qdel 0001.pbcm
 ## **5**. 기
 
 ANSYS Fluent 버전별 Start Guide 문서
+
+{% hint style="info" %}
+2022년 9월 15일에 마지막으로 업데이트되었습니다.
+{% endhint %}
