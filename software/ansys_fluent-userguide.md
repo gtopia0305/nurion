@@ -165,7 +165,7 @@ $ qsub fluent.sh​
 $ qdel 0001.pbcm
 ```
 
-## **5**. 기
+## **5**. 기타&#x20;
 
 ANSYS Fluent 버전별 Start Guide 문서
 
