@@ -59,7 +59,7 @@ $ module load cfx/v181
 | option | <p> -def definition 파일 (또는 restart를 위한 result 파일) 지정</p><p> -parallel 병렬 모드로 실행</p><p> -par-local parallel run on the local host only</p><p> -par-dist distributed parallel run</p><p> -part &#x3C;#partition> partitioning 모드로 solver를 실행</p><p> -parfile partitioning 정보 파일 지정</p><p> -help 사용가능 키워드 나열</p> |
 | 예제     | <p> cfx5solve -def model.def</p><p> cfx5solve -def model.def -par-local -partition 2</p><p> cfx5solve -def model.def -parallel -parfile model.par</p><p> cfx5solve -def model.def -initial model_003.res -par-local -partition 2</p>                                                                          |
 
-\- 로그인노드에서 Interactive 방식의 실행은 CPU time이 10분으로 제한되어 있습니다.
+&#x20;\- 로그인노드에서 Interactive 방식의 실행은 CPU time이 10분으로 제한되어 있습니다.
 
 &#x20;\- 장시간의 계산 작업은 PBS Professional 이라는 스케쥴러를 이용하여 작업을 제출해야 합니다.
 
@@ -71,7 +71,7 @@ $ module load cfx/v181
 
 \- 예제 파일 :  /apps/commercial/test\_samples/ANSYS/cfx\_v181.sh **(단일노드에서 수행)**
 
-&#x20;                       /apps/commercial/test\_samples/ANSYS/cfx\_v181\_multinode.sh **(멀티 노드에서 수행)** &#x20;
+&#x20;                     /apps/commercial/test\_samples/ANSYS/cfx\_v181\_multinode.sh **(멀티 노드에서 수행)** &#x20;
 
 ※ 아래 예제는 5호기 시스템에서의 CFX에 대한 예제입니다. **(단일노드에서 수행)**
 
@@ -91,7 +91,7 @@ cpus=`cat $PBS_NODEFILE | wc -l`
 cfx5solve -def StaticMixer.def -par-local -partition ${cpus}   # CFX 명령 실행
 ```
 
-\- 위에서 예제는 사용자가 적절히 수정해야 합니다.
+&#x20;\- 위에서 예제는 사용자가 적절히 수정해야 합니다.
 
 &#x20;\- 2019년 3월 PM 이후(3월14일) 부터 "#PBS -A ansys " 옵션이 없는 경우 작업제출이 되지 않습니다.
 
