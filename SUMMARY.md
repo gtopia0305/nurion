@@ -13,6 +13,7 @@
 ## SOFTWARE
 
 * [ANSYS FLUENT 사용자 지침서](software/ansys\_fluent-userguide.md)
+* [ANSYS CFX 사용자 지침서](software/ansys\_cfx-userguide.md)
 * [NASTRAN 사용자 지침서](software/nastran-userguide.md)
 * [가우시안16(Gaussian16) LINDA 지침서](software/gaussian16-linda-userguide.md)
 * [가우시안16(Gaussian16) 지침서](software/gaussian16-userguide.md)
