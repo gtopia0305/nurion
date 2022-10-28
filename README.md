@@ -29,12 +29,24 @@ coverY: 0
 
 ### SOFTWARE
 
+{% content-ref url="software/ansys_fluent-userguide.md" %}
+[ansys\_fluent-userguide.md](software/ansys\_fluent-userguide.md)
+{% endcontent-ref %}
+
+{% content-ref url="software/ansys_cfx-userguide.md" %}
+[ansys\_cfx-userguide.md](software/ansys\_cfx-userguide.md)
+{% endcontent-ref %}
+
 {% content-ref url="software/nastran-userguide.md" %}
 [nastran-userguide.md](software/nastran-userguide.md)
 {% endcontent-ref %}
 
 {% content-ref url="software/gaussian16-linda-userguide.md" %}
 [gaussian16-linda-userguide.md](software/gaussian16-linda-userguide.md)
+{% endcontent-ref %}
+
+{% content-ref url="software/gaussian16-userguide.md" %}
+[gaussian16-userguide.md](software/gaussian16-userguide.md)
 {% endcontent-ref %}
 
 ### APPENDIX
