@@ -57,7 +57,7 @@ $ module load cfx/v181
 | 형식     |  cfx5solve \[option]                                                                                                                                                                                                                                                                                          |
 | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | option | <p> -def definition 파일 (또는 restart를 위한 result 파일) 지정</p><p> -parallel 병렬 모드로 실행</p><p> -par-local parallel run on the local host only</p><p> -par-dist distributed parallel run</p><p> -part &#x3C;#partition> partitioning 모드로 solver를 실행</p><p> -parfile partitioning 정보 파일 지정</p><p> -help 사용가능 키워드 나열</p> |
-| 예제     | <p>cfx5solve -def model.def</p><p> cfx5solve -def model.def -par-local -partition 2</p><p> cfx5solve -def model.def -parallel -parfile model.par</p><p> cfx5solve -def model.def -initial model_003.res -par-local -partition 2</p>                                                                           |
+| 예제     | <p> cfx5solve -def model.def</p><p> cfx5solve -def model.def -par-local -partition 2</p><p> cfx5solve -def model.def -parallel -parfile model.par</p><p> cfx5solve -def model.def -initial model_003.res -par-local -partition 2</p>                                                                          |
 
 \- 로그인노드에서 Interactive 방식의 실행은 CPU time이 10분으로 제한되어 있습니다.
 
