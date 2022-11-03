@@ -125,27 +125,23 @@
 
 <figure><img src="../.gitbook/assets/4.png" alt=""><figcaption><p>[메뉴 상태]</p></figcaption></figure>
 
-### 1.2. 배치작업 <a href="#_toc118286662" id="_toc118286662"></a>
+### 1.3. 배치작업 <a href="#_toc118286662" id="_toc118286662"></a>
 
-#### 1.2.1. 큐 정보 <a href="#_toc118286663" id="_toc118286663"></a>
+#### 1.3.1. 큐 정보 <a href="#_toc118286663" id="_toc118286663"></a>
 
-&#x20;
-
-가.   프로그램 실행
+&#x20;가.   프로그램 실행
 
 ① 메인 대시보드의 서비스 준비가 완료되면, 배치 작업 위젯의 + 버튼을 클릭하여 프로그램을 구동합니다.
 
 ② 탭으로 구성된 화면에서 \[큐 정보]를 클릭하여 이동합니다.
 
-![](file:///C:/Users/GTIDEA\~1/AppData/Local/Temp/msohtmlclip1/01/clip\_image008.jpg)
+<figure><img src="../.gitbook/assets/5.png" alt=""><figcaption></figcaption></figure>
 
 ※ 배치 작업을 실행시 서비스 준비가 완료되면 다음과 같은 화면으로 변경됩니다.
 
-![](file:///C:/Users/GTIDEA\~1/AppData/Local/Temp/msohtmlclip1/01/clip\_image010.jpg)   ![](file:///C:/Users/GTIDEA\~1/AppData/Local/Temp/msohtmlclip1/01/clip\_image012.jpg)
+<figure><img src="../.gitbook/assets/20221103_164025.png" alt=""><figcaption></figcaption></figure>
 
-&#x20;
-
-![](file:///C:/Users/GTIDEA\~1/AppData/Local/Temp/msohtmlclip1/01/clip\_image014.jpg)
+<figure><img src="../.gitbook/assets/8.png" alt=""><figcaption></figcaption></figure>
 
 &#x20;
 
@@ -161,7 +157,7 @@
 
 3\. Filtering Clear : 필터링 상태를 취소한다.
 
-![](file:///C:/Users/GTIDEA\~1/AppData/Local/Temp/msohtmlclip1/01/clip\_image016.jpg)
+
 
 &#x20;
 
