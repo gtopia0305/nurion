@@ -285,27 +285,13 @@ Delete : 파일 트리에서 선택한 파일 또는 디렉토리를 삭제한�
 
 #### 1.4.1. 로그인 <a href="#_toc118286667" id="_toc118286667"></a>
 
-&#x20;
-
-아이디, 비밀번호, OTP 번호 입력, 접속할 서비스(Nurion)를 선택 후 로그인한다.
+&#x20;아이디, 비밀번호, OTP 번호 입력, 접속할 서비스(Nurion)를 선택 후 로그인한다.
 
 &#x20;
 
-![](file:///C:/Users/GTIDEA\~1/AppData/Local/Temp/msohtmlclip1/01/clip\_image026.jpg)
+<figure><img src="../.gitbook/assets/14.png" alt=""><figcaption></figcaption></figure>
 
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-#### 1.3.2. 대시보드
+#### 1.4.2. 대시보드
 
 1\.     이용중인 서비스 내역 표기 : SRU Time, 제공량, 잔여량, 사용량, 활용률, 계약기간 정보를 제공한다.
 
@@ -315,11 +301,11 @@ Delete : 파일 트리에서 선택한 파일 또는 디렉토리를 삭제한�
 
 &#x20;
 
-![](file:///C:/Users/GTIDEA\~1/AppData/Local/Temp/msohtmlclip1/01/clip\_image028.jpg)
+<figure><img src="../.gitbook/assets/15.png" alt=""><figcaption></figcaption></figure>
 
 &#x20;
 
-#### 1.3.3. Job 정보
+#### 1.4.3. Job 정보
 
 1\.     Job 정보 : My Job탭에서 Job Id 항목을 선택하면 스크립트 내용을 표기할 수 있다.
 
@@ -329,15 +315,7 @@ Delete : 파일 트리에서 선택한 파일 또는 디렉토리를 삭제한�
 
 &#x20;
 
-![](file:///C:/Users/GTIDEA\~1/AppData/Local/Temp/msohtmlclip1/01/clip\_image030.jpg)![](file:///C:/Users/GTIDEA\~1/AppData/Local/Temp/msohtmlclip1/01/clip\_image032.jpg)
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
+<figure><img src="../.gitbook/assets/20221103_165852.png" alt=""><figcaption></figcaption></figure>
 
 &#x20;
 
@@ -345,6 +323,6 @@ Delete : 파일 트리에서 선택한 파일 또는 디렉토리를 삭제한�
 
 큐 정보 : 큐 정보를 탭을 선택하면 접속한 시스템의 큐 정보를 보여준다
 
-![](file:///C:/Users/GTIDEA\~1/AppData/Local/Temp/msohtmlclip1/01/clip\_image034.jpg)
+<figure><img src="../.gitbook/assets/17.png" alt=""><figcaption></figcaption></figure>
 
 &#x20;
