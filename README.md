@@ -27,8 +27,8 @@ coverY: 0
 [user-support.md](system/user-support.md)
 {% endcontent-ref %}
 
-{% content-ref url="system/undefined.md" %}
-[undefined.md](system/undefined.md)
+{% content-ref url="system/user-nuri-guide.md" %}
+[user-nuri-guide.md](system/user-nuri-guide.md)
 {% endcontent-ref %}
 
 ### SOFTWARE
